@@ -1,10 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +11,146 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.outside {
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside {
+  width:90%;
+  background-color:white;
+  height:100%;
+  padding:20px;
+  border-radius:20px
+}
+
+.login-box {
+  display: flex;
+  background-color: white;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#logo {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+#calendar-box {
+  width: 40%;
+  padding: 15px;
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+#month-picker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#month-picker span {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+}
+
+#week-days {
+  display: flex;
+  justify-content: center;
+}
+
+#calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calendar-button {
+  border: none;
+  flex-basis: 12%;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.available-day {
+  background-color: white;
+  color: hsl(215deg 100% 50%);
+  border: 1px solid hsl(215deg 100% 50%);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#appointment-box {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  align-content: center;
+  height: 65%;
+}
+
+.appointment-button {
+  background-color: white;
+  color: hsl(215deg 100% 50%);
+  border: 1px solid hsl(215deg 100% 50%);
+  width: 85px;
+  height: 30px;
+}
+
+.appointment-button:hover, .selected-button, .available-day:hover {
+  background-color: hsl(215deg 100% 50%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: lightblue;
+  padding: 10px;
+  width: 95%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form { 
+  width: 400px;
+  display: flex;
+  justify-content: center; 
 }
+
+form section div { float: left; }
+form section div label { display: block; }
+form section div input { margin-bottom: 10px }
+
+section {  display:flex; flex-direction:column }
+
+button {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  outline:none;
+  cursor: pointer;
+}
+
+.nav-linkx {
+  background-color: lightblue;
+  border: none;
+  outline: none;
+}
+
+#contact-form {
+  flex-direction: column;
+}
+
